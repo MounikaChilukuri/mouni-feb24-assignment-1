@@ -1,0 +1,23 @@
+def count_primes_in_list(numbers):
+    primes = []
+
+    for num in numbers:
+        if num == 1:
+            primes.append(num)
+        else:
+            is_prime = True
+            for i in range(2, num):
+                if num % i == 0:
+                    is_prime = False
+                    break
+
+            if is_prime:
+                print (num)
+                primes.append(num)
+
+    return len(primes)
+
+
+z = [2,55,67,19,5,3,13,78,50]
+print ("Number of primes is: ",count_primes_in_list(z))
+
